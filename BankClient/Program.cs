@@ -2,7 +2,9 @@
 using Microsoft.Extensions.Logging;
 using Orleans;
 
+Console.Title = "Bank Client";
 
+// dotnet run --project BankClient
 using var client = new ClientBuilder()
     .UseLocalhostClustering()
     .ConfigureLogging(logging => logging.AddConsole())
@@ -10,7 +12,7 @@ using var client = new ClientBuilder()
 
 await client.Connect();
 
-var accountNames = new[] { "Xaawo", "Pasqualino", "Derick", "Ida", "Stacy", "Xiao" };
+var accountNames = new[] { "A1", "A2", "A3", "MXA0" };
 var random = Random.Shared;
 
 while (!Console.KeyAvailable)
@@ -51,7 +53,7 @@ while (!Console.KeyAvailable)
 
         if (exception.InnerException is { } inner)
         {
-            Console.WriteLine($"\tInnerException: {inner.Message}\n");
+            Console.Error.WriteLine($"\tInnerException: {inner.Message}\n");
         }
 
         Console.WriteLine();

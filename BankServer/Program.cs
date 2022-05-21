@@ -2,6 +2,9 @@
 using Orleans;
 using Orleans.Hosting;
 
+Console.Title = "Bank Server";
+
+// dotnet run --project BankServer
 await Host.CreateDefaultBuilder()
     .UseOrleans(siloBuilder =>
     {

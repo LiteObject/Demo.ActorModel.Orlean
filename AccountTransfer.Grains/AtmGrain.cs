@@ -4,6 +4,9 @@ using Orleans.Concurrency;
 
 namespace AccountTransfer.Grains
 {
+    /// <summary>
+    /// AtmGrain, which implements IAtmGrain, simulates an "Automatic Teller Machine" which allows transfers between two bank accounts.
+    /// </summary>
     [StatelessWorker]
     public class AtmGrain : Grain, IAtmGrain
     {

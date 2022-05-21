@@ -24,6 +24,12 @@ Typically, a group of silos runs as a cluster for scalability and fault toleranc
 ![](https://docs.microsoft.com/en-us/dotnet/orleans/media/cluster-silo-grain-relationship.svg#lightbox)
 
 In addition to the core programming model, silos provide grains with a set of runtime services such as timers, reminders (persistent timers), persistence, transactions, streams, and more. 
+
+---
+# How to run the demo
+- First start the BankServer process: `dotnet run --project BankServer`
+- Then start the BankClient process: `dotnet run --project BankClient`
+
 ---
 ## Useful Links:
 - Original document: https://docs.microsoft.com/en-us/dotnet/orleans/overview
