@@ -22,6 +22,7 @@ while (!Console.KeyAvailable)
     // Choose some random accounts to exchange money
     var fromId = random.Next(accountNames.Length);
     var toId = random.Next(accountNames.Length);
+
     while (toId == fromId)
     {
         // Avoid transfering to/from the same account, since it would be meaningless
